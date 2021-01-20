@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title> Компания - Шаблоны мини-магазина медицинской техники</title>
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="width=device-width" name="viewport">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<link href="img/favicon.png" rel="icon" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="assets-for-index-2/css/bootstrap-light.css" rel="stylesheet">
+	<link id="pagestyle" href="assets-for-index-2/css/theme-light.css" rel="stylesheet">
+	<link href="style-index-2.css" rel="stylesheet">
+	<link href="assets-for-index-2/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets-for-index-2/css/responsive.css" rel="stylesheet">
+</head>
+
+<body data-offset="50" data-spy="scroll" data-target=".navbar" class="dark-theme index-3">
+	<!-- PRELOADER -->
+	<div class="page-loader">
+		<div class="loader">Загрузка...</div>
+	</div>
+	<!-- /PRELOADER -->
+	<!-- header -->
+	<nav class="navbar navbar-fixed-top shadow" id="js-nav">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="index-3.html#"> <img src="assets-for-index-2/img/logo-ru.png" alt="" />
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="index-3.html#home">Главная</a></li>
+					<li><a href="index-3.html#products">Товары</a></li>
+					<li><a href="index-3.html#testimonials">Отзывы</a></li>
+					<li><a href="index-3.html#contact">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--/ End header -->
+
+	<!-- slider -->
+	<section class="home section image-slider" id="home">
+		<div class="home-slider text-center">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background: url(assets-for-index-2/img/slider/slide4.jpg);">
+					<h1>Мойте руки <span class="hglight"></span></h1>
+					<h2 class="home-slider-title-main">80% Скидка на этот сезон </h2>
+					<div class="home-buttons text-center"> <a href="index-3.html#products"
+							class="btn btn-lg  btn-primary">Наши товары</a> </div>
+					<a class="arrow bounce text-center" href="index-3.html#about"> <span class="ti-mouse"></span> <span
+							class="ti-angle-double-down"></span> </a>
+				</div>
+				<div class="swiper-slide" style="background: url(assets-for-index-2/img/slider/slide3.jpg);">
+					<h1>оставайтесь здоровыми </h1>
+					<h2 class="home-slider-title-main">с картой и pay pal</h2>
+					<div class="home-buttons text-center"> <a href="index-3.html#products"
+							class="btn btn-lg  btn-primary">Наши товары</a> </div>
+					<a class="arrow bounce text-center" href="index-3.html#about"> <span class="ti-mouse"></span> <span
+							class="ti-angle-double-down"></span> </a>
+				</div>
+			</div>
+			<div class="home-pagination"></div>
+			<div class="home-slider-next right-arrow-negative"> <span class="ti-arrow-right"></span> </div>
+			<div class="home-slider-prev left-arrow-negative"> <span class="ti-arrow-left"></span> </div>
+		</div>
+	</section>
+	<!--/ slider -->
+
+	<!-- cart section -->
+	<span id="items-counter" class="h3 cart-items-counter" style="display: none">0</span>
+	<div class="cart-widget-container">
+		<div class="cart-widget text-center">
+			<a class="close" id="cart-widget-close">
+				<span class="ti-close"></span>
+			</a>
+			<h1>Компания</span></h1>
+			<h3 class="section-heading">ВАША КОРЗИНА</h3>
+			<div id="cart-empty" class="cart-empty">
+				<h4>Пусто <span class="ti-face-sad icon"></span> </h4>
+			</div>
+			<!-- container for js inject cart items content -->
+			<div class="items-container" id="items"></div>
+			<!-- container for js inject cart items content -->
+
+			<div class="cart-delivery" id="cart-delivery">
+				<h4 class="section-heading">СПОСОБЫ ДОСТАВКИ</h4>
+				<div class="custom-radio">
+					<input id="radio1" type="radio" name="delivery" value="10.00" checked>
+					<label for="radio1">по городу 10 руб.</label>
+				</div>
+
+				<div class="custom-radio">
+					<input id="radio2" type="radio" name="delivery" value="15.00">
+					<label for="radio2">По регионам 15 руб. </label>
+				</div>
+
+				<div class="custom-radio">
+					<input id="radio3" type="radio" name="delivery" value="20.00">
+					<label for="radio3">международная доставка 20 руб</label>
+				</div>
+			</div>
+			<div class="cart-summary" id="cart-summary">
+				<h4 class="section-heading">СВОДКА</h4>
+				<div class="cart-summary-row" id="cart-total">Стоимость всех товаров: <span class="cart-value"><span
+							id="cost_value">0.00</span> руб.</span></div>
+				<div class="cart-summary-row">Доставка: <span class="cart-value"><span id="cost_delivery"></span>
+						руб.</span>
+				</div>
+				<div class="cart-summary-row cart-summary-row-total">Итого: <span class="cart-value"><span
+							id="total-total"></span> руб.</span></div>
+			</div>
+
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="cart-form" id="cart-form">
+				<!-- Identify your business so that you can collect the payments. -->
+				<input type="hidden" name="business" value="yourpaypal@email.com">
+				<!-- Specify a Buy Now button. -->
+				<input type="hidden" name="cmd" value="_xclick">
+				<!-- Specify details about the item that buyers will purchase. -->
+				<input type="hidden" name="item_name" value="Goshop shop - checkout">
+				<input type="hidden" name="amount" id="amount" value="">
+				<input type="hidden" name="currency_code" value="USD">
+				<!-- Display the payment button. -->
+				<button type="submit" name="submit" class="btn btn-default btn-lg">
+					Заказать <span class="ti-arrow-right"></span>
+				</button>
+			</form>
+		</div>
+		<div class="cart-widget-close-overlay"></div>
+	</div>
+	<!--/ cart section end -->
+
+
+
+	<!-- Banner Area Start Here -->
+	<div class="banner-area h3_banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-12 ">
+					<div class="banner-box banner-type-5 banner-hover-3 nnrrnew">
+						<div class="banner-inner">
+							<div class="banner-image">
+								<img src="assets-for-index-2/img/h3ad1.jpg" alt="Banner">
+							</div>
+							<div class="banner-info">
+								<div class="banner-info--inner one_inr">
+
+									<p class="heading-bigger text-capitalize">Перчатки</p>
+									<p class="banner-title-1 text-uppercase font-weight-bold">Скидка 50% на медицинские
+										перчатки</p>
+								</div>
+							</div>
+							<a class="banner-link banner-overlay" href="index-3.html#">Заказать</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 col-sm-12 ">
+					<div class="banner-box banner-type-5 banner-hover-3 mm_b_30">
+						<div class="banner-inner">
+							<div class="banner-image">
+								<img src="assets-for-index-2/img/h3ad2.jpg" alt="Banner">
+							</div>
+							<div class="banner-info">
+								<div class="banner-info--inner two_inr">
+									<p class="banner-title-1 font-weight-bold text-uppercase">Одноразовые маски для лица
+									</p>
+									<p class="banner-title-4">
+										<span>скидка 70%
+										</span>
+									</p>
+									<p class="banner-title-5">
+										Не пропусти </p>
+								</div>
+							</div>
+							<a class="banner-link banner-overlay" href="index-3.html#">Заказать</a>
+						</div>
+					</div>
+
+					<div class="banner-box banner-type-5 banner-hover-3 mm_b_30">
+						<div class="banner-inner">
+							<div class="banner-image">
+								<img src="assets-for-index-2/img/h3ad3.jpg" alt="Banner">
+							</div>
+							<div class="banner-info">
+								<div class="banner-info--inner three_inr">
+									<p class="banner-title-1 font-weight-bold text-uppercase">ручной магазин</p>
+									<p class="banner-title-4">
+										<span>Скидка 50%</span>
+									</p>
+									<p class="banner-title-5">Не пропустите это</p>
+								</div>
+							</div>
+							<a class="banner-link banner-overlay" href="index-3.html#">Заказать</a>
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+	<!-- Banner Area End Here -->
+
+
+	<!-- products area -->
+	<section class="section-min section product " id="products">
+		<div class="container overflow-hidden">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">РЕКОМЕНДУЕМЫЕ ТОВАРЫ</h3>
+				</div>
+				<div class="col-md-12">
+					<div class="product-list-sliderd">
+						<ul class="swiper-wrappers product-list product-list-vertical">
+							<li class="swiper-slidess text-center">
+								<span class="product-list-left pull-left">
+									<span class="sale-p">Распродажа</span>
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+											alt="product image" class="product-list-primary-img"
+											src="assets-for-index-2/img/index-3-products/p1.jpg">
+										<img alt="product image" class="product-list-secondary-img"
+											src="assets-for-index-2/img/index-3-products/p3.jpg">
+									</a>
+								</span>
+
+								<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4 black-color"> мятное мыло "Новая жизнь"
+										</span>
+										<span class="product-list-price">400.00 руб.</span>
+										<span class="product-list-price sell-p"><del>580.00 руб.</del></span>
+										<span class="rating-area">
+											<span class="ti-star "></span>
+											<span class="ti-star "></span>
+											<span class="ti-star "></span>
+											<span class="ti-star"></span>
+											<span class="ti-star"></span>
+										</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button"
+									data-image="assets-for-index-2/img/index-3-products/p1.jpg"
+									data-name="Winter Long Sleeve Black White " data-cost="400.00" data-id="1">
+									добавить в корзину
+								</button>
+							</li>
+
+							<li class="swiper-slidess text-center">
+								<span class="product-list-left pull-left">
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+											alt="product image" class="product-list-primary-img"
+											src="assets-for-index-2/img/index-3-products/p8.jpg">
+										<img alt="product image" class="product-list-secondary-img"
+											src="assets-for-index-2/img/index-3-products/p4.jpg">
+									</a>
+								</span>
+
+								<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4 black-color">
+											Женская черная маска для лица</span>
+										<span class="product-list-price">300.00 руб.</span>
+										<span class="rating-area">
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star"></span>
+											<span class="ti-star"></span>
+										</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button"
+									data-image="img/index-3-products/p8.jpg" data-name="women totes lady handbag"
+									data-cost="300.00" data-id="2">
+									добавить в корзину
+								</button>
+							</li>
+
+							<li class="swiper-slidess text-center">
+								<span class="product-list-left pull-left">
+									<span class="sale-p new-p">Новинка</span>
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+											alt="product image" class="product-list-primary-img"
+											src="assets-for-index-2/img/index-3-products/p4.jpg">
+										<img alt="product image" class="product-list-secondary-img"
+											src="assets-for-index-2/img/index-3-products/p6.jpg">
+									</a>
+								</span>
+
+								<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4 black-color">
+											жидкое мыло для рук</span>
+										<span class="product-list-price">600.00 руб.</span>
+										<span class="rating-area">
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+										</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button"
+									data-image="assets-for-index-2/img/index-3-products/p4.jpg"
+									data-name="Lace water soluble sexy dress" data-cost="600.00" data-id="3">
+									добавить в корзину
+								</button>
+							</li>
+
+							<li class="swiper-slidess  text-center">
+								<span class="product-list-left pull-left">
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+											alt="product image" class="product-list-primary-img"
+											src="assets-for-index-2/img/index-3-products/p10.jpg">
+										<img alt="product image" class="product-list-secondary-img"
+											src="assets-for-index-2/img/index-3-products/p8.jpg">
+									</a>
+								</span>
+
+								<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4 black-color">
+											Комфортная маска для лица</span>
+										<span class="product-list-price">500.00 руб.</span>
+										<span class="rating-area">
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star "></span>
+											<span class="ti-star"></span>
+											<span class="ti-star"></span>
+										</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button"
+									data-image="assets-for-index-2/img/index-3-products/p10.jpg"
+									data-name="ЭЛЕГАНТНОЕ ПЛАТЬЕ ДЛЯ ВЕЧЕРИНКИ" data-cost="500.00" data-id="4">
+									добавить в корзину
+								</button>
+							</li>
+
+							<li class="swiper-slidess text-center">
+								<span class="product-list-left pull-left">
+									<span class="sale-p">Распродажа</span>
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+											alt="product image" class="product-list-primary-img"
+											src="assets-for-index-2/img/index-3-products/p2.jpg">
+										<img alt="product image" class="product-list-secondary-img"
+											src="assets-for-index-2/img/index-3-products/p10.jpg">
+									</a>
+								</span>
+
+								<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4 black-color">Мыло для рук "Mini Red"</span>
+										<span class="product-list-price">600.00 руб.</span>
+										<span class="product-list-price sell-p"><del>700.00 руб.</del></span>
+										<span class="rating-area">
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star"></span>
+											<span class="ti-star"></span>
+										</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button"
+									data-image="assets-for-index-2/img/index-3-products/p2.jpg"
+									data-name="Mini Dress Ladies Sleeve" data-cost="600.00" data-id="5">
+									добавить в корзину
+								</button>
+							</li>
+
+							<li class="swiper-slidess text-center">
+								<span class="product-list-left pull-left">
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+											alt="product image" class="product-list-primary-img"
+											src="assets-for-index-2/img/index-3-products/p1.jpg">
+										<img alt="product image" class="product-list-secondary-img"
+											src="assets-for-index-2/img/index-3-products/p2.jpg">
+									</a>
+								</span>
+
+								<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4 black-color">Лучшее мыло для рук</span>
+										<span class="product-list-price">500.00 руб.</span>
+										<span class="rating-area">
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star high_light"></span>
+											<span class="ti-star"></span>
+										</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button"
+									data-image="assets-for-index-2/img/index-3-products/p1.jpg"
+									data-name="Winter Long Sleeve Black White " data-cost="500.00" data-id="6">
+									добавить в корзину
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- <div class="single-category-box2 ">
+
+					<a class="link-btn" href="index-3.html#"><img src="assets-for-index-2/img/lg3.jpg" alt="image"></a>
+				</div> -->
+
+
+
+				<div class="new-products-area">
+					<div class="col-md-12">
+						<h3 class="section-heading">Новые товары</h3>
+					</div>
+					<div class="col-md-12">
+						<div class="product-list-slider">
+							<ul class="swiper-wrapper product-list product-list-vertical">
+								<li class="swiper-slide text-center">
+									<span class="product-list-left pull-left">
+										<span class="sale-p">Распродажа</span>
+										<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+												alt="product image" class="product-list-primary-img"
+												src="assets-for-index-2/img/index-3-products/p12.jpg">
+											<img alt="product image" class="product-list-secondary-img"
+												src="assets-for-index-2/img/index-3-products/p2.jpg">
+										</a>
+									</span>
+
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+										<span class="product-list-right pull-left">
+											<span class="product-list-name h4 black-color">Маленькая детская белая маска
+											</span>
+											<span class="product-list-price">$400.00</span>
+											<span class="product-list-price sell-p"><del>580.00 руб.</del></span>
+											<span class="rating-area">
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star"></span>
+											</span>
+										</span>
+									</a>
+
+									<button class="btn btn-default add-item" type="button"
+										data-image="assets-for-index-2/img/index-3-products/p12.jpg"
+										data-name="women white backless mini" data-cost="400.00" data-id="1">
+										добавить в корзину
+									</button>
+								</li>
+
+								<li class="swiper-slide text-center">
+									<span class="product-list-left pull-left">
+										<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+												alt="product image" class="product-list-primary-img"
+												src="assets-for-index-2/img/index-3-products/p10.jpg">
+											<img alt="product image" class="product-list-secondary-img"
+												src="assets-for-index-2/img/index-3-products/p4.jpg">
+										</a>
+									</span>
+
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+										<span class="product-list-right pull-left">
+											<span class="product-list-name h4 black-color">
+												Женская черная маска новинка</span>
+											<span class="product-list-price">300.00 руб.</span>
+											<span class="rating-area">
+												<span class="ti-star "></span>
+												<span class="ti-star "></span>
+												<span class="ti-star "></span>
+												<span class="ti-star "></span>
+												<span class="ti-star"></span>
+											</span>
+										</span>
+									</a>
+
+									<button class="btn btn-default add-item" type="button"
+										data-image="assets-for-index-2/img/index-3-products/p10.jpg"
+										data-name=" women totes lady handbag" data-cost="300.00" data-id="2">
+										добавить в корзину
+									</button>
+								</li>
+
+								<li class="swiper-slide text-center">
+									<span class="product-list-left pull-left">
+										<span class="sale-p new-p">Новинка</span>
+										<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+												alt="product image" class="product-list-primary-img"
+												src="assets-for-index-2/img/index-3-products/p5.jpg">
+											<img alt="product image" class="product-list-secondary-img"
+												src="assets-for-index-2/img/index-3-products/p6.jpg">
+										</a>
+									</span>
+
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+										<span class="product-list-right pull-left">
+											<span class="product-list-name h4 black-color">жидкое мыло для рук</span>
+											<span class="product-list-price">600.00 руб.</span>
+											<span class="rating-area">
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star"></span>
+											</span>
+										</span>
+									</a>
+
+									<button class="btn btn-default add-item" type="button"
+										data-image="assets-for-index-2/img/index-3-products/p5.jpg"
+										data-name="Sexy Women Floral Embroidery" data-cost="600.00" data-id="3">
+										добавить в корзину
+									</button>
+								</li>
+
+								<li class="swiper-slide  text-center">
+									<span class="product-list-left pull-left">
+										<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+												alt="product image" class="product-list-primary-img"
+												src="assets-for-index-2/img/index-3-products/p7.jpg">
+											<img alt="product image" class="product-list-secondary-img"
+												src="assets-for-index-2/img/index-3-products/p8.jpg">
+										</a>
+									</span>
+
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+										<span class="product-list-right pull-left">
+											<span class="product-list-name h4 black-color">
+												жидкий рифиль Meyers</span>
+											<span class="product-list-price">500.00 руб.</span>
+											<span class="rating-area">
+												<span class="ti-star high_light"></span>
+												<span class="ti-star"></span>
+												<span class="ti-star"></span>
+												<span class="ti-star"></span>
+												<span class="ti-star"></span>
+											</span>
+										</span>
+									</a>
+
+									<button class="btn btn-default add-item" type="button"
+										data-image="assets-for-index-2/img/index-3-products/p7.jpg"
+										data-name="ЭЛЕГАНТНОЕ ПЛАТЬЕ ДЛЯ ВЕЧЕРИНКИ" data-cost="500.00" data-id="4">
+										добавить в корзину
+									</button>
+								</li>
+
+								<li class="swiper-slide text-center">
+									<span class="product-list-left pull-left">
+										<span class="sale-p">Распродажа</span>
+										<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+												alt="product image" class="product-list-primary-img"
+												src="assets-for-index-2/img/index-3-products/p9.jpg">
+											<img alt="product image" class="product-list-secondary-img"
+												src="assets-for-index-2/img/index-3-products/p10.jpg">
+										</a>
+									</span>
+
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+										<span class="product-list-right pull-left">
+											<span class="product-list-name h4 black-color">
+												Нитриловые одноразовые
+												Перчатки</span>
+											<span class="product-list-price">600.00 руб.</span>
+											<span class="product-list-price sell-p"><del>700.00 руб.</del></span>
+											<span class="rating-area">
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star"></span>
+												<span class="ti-star"></span>
+												<span class="ti-star"></span>
+											</span>
+										</span>
+									</a>
+
+									<button class="btn btn-default add-item" type="button"
+										data-image="assets-for-index-2/img/index-3-products/p9.jpg"
+										data-name="Mini Dress Ladies Sleeve" data-cost="600.00" data-id="5">
+										добавить в корзину
+									</button>
+								</li>
+
+								<li class="swiper-slide text-center">
+									<span class="product-list-left pull-left">
+										<a href="index-3.html#" data-target="#product-01" data-toggle="modal"><img
+												alt="product image" class="product-list-primary-img"
+												src="assets-for-index-2/img/index-3-products/p11.jpg">
+											<img alt="product image" class="product-list-secondary-img"
+												src="assets-for-index-2/img/index-3-products/p2.jpg">
+										</a>
+									</span>
+
+									<a href="index-3.html#" data-target="#product-01" data-toggle="modal">
+										<span class="product-list-right pull-left">
+											<span class="product-list-name h4 black-color">
+												Одноразовые 3 слойные
+												маски</span>
+											<span class="product-list-price">500.00 руб.</span>
+											<span class="rating-area">
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star high_light"></span>
+												<span class="ti-star"></span>
+												<span class="ti-star"></span>
+											</span>
+										</span>
+									</a>
+
+									<button class="btn btn-default add-item" type="button"
+										data-image="assets-for-index-2/img/index-3-products/p11.jpg"
+										data-name="Winter Long Sleeve Black White" data-cost="500.00" data-id="6">
+										добавить в корзину
+									</button>
+								</li>
+							</ul>
+							<!-- Add Pagination -->
+							<div class="product-list-slider-next right-arrow-negative"> <span
+									class="ti-arrow-right"></span> </div>
+							<div class="product-list-slider-prev left-arrow-negative"> <span
+									class="ti-arrow-left"></span> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PRODUCT MODAL -->
+		<div class="modal fade product-modal" id="product-01" role="dialog" tabindex="-1">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content shadow">
+					<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+					<div class="modal-body">
+						<!-- Wrapper for slides -->
+						<div class="carousel slide product-slide" id="product-carousel">
+							<div class="carousel-inner cont-slider">
+								<div class="item active"> <img alt=""
+										src="assets-for-index-2/img/index-3-products/p7.jpg" title=""> </div>
+								<div class="item"> <img alt="" src="assets-for-index-2/img/index-3-products/p4.jpg"
+										title=""> </div>
+								<div class="item"> <img alt="" src="assets-for-index-2/img/index-3-products/p5.jpg"
+										title=""> </div>
+								<div class="item"> <img alt="" src="assets-for-index-2/img/index-3-products/p2.jpg"
+										title=""> </div>
+							</div>
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li class="active" data-slide-to="0" data-target="#product-carousel"> <img alt=""
+										src="assets-for-index-2/img/index-3-products/p7.jpg"> </li>
+								<li class="" data-slide-to="1" data-target="#product-carousel"> <img alt=""
+										src="assets-for-index-2/img/index-3-products/p4.jpg"> </li>
+								<li class="" data-slide-to="2" data-target="#product-carousel"> <img alt=""
+										src="assets-for-index-2/img/index-3-products/p5.jpg"> </li>
+								<li class="" data-slide-to="3" data-target="#product-carousel"> <img alt=""
+										src="assets-for-index-2/img/index-3-products/p2.jpg"> </li>
+							</ol>
+						</div>
+						<!-- Wrapper for slides -->
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 col-md-push-2">
+									<div class="row">
+										<div class="col-md-7">
+											<h3 class="pull-left nk section-heading">жидкий рифиль Meyers</h3>
+										</div>
+										<div class="col-md-5">
+											<span class="product-right-section">
+												<span>299.00 руб.</span>
+												<button class="btn btn-default add-item" type="button"
+													data-image="assets-for-index-2/img/index-3-products/p2.jpg"
+													data-name="ЭЛЕГАНТНОЕ ПЛАТЬЕ ДЛЯ ВЕЧЕРИНКИ" data-cost="299.00"
+													data-id="8">
+													добавить в корзину </button>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8 col-md-push-2 product-description">
+									<h4 class="section-heading">Заголовок</h4>
+									<p> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+										тексты. Свою запятой переписывается использовало всемогущая даже переписали!
+										Имени, приставка безопасную. Живет себя пояс запятой? Ручеек вскоре продолжил
+										домах но снова.</p>
+									<p> Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные
+										тексты. Обеспечивает первую, предупредила осталось своих даль там запятых города
+										переписали деревни, залетают решила необходимыми инициал пустился взгляд
+										использовало сбить сих?Его они силуэт вопроса она обеспечивает заглавных строчка
+										на берегу переписывается всемогущая инициал над великий меня свое текстами
+										проектах он, раз что первую маленький по всей мир решила. Текст своих свой
+										алфавит. </p>
+									<div class="row">
+										<div class="col-md-6"> <img src="assets-for-index-2/img/index-3-products/p7.jpg"
+												class="img-responsive" alt="product image"> </div>
+										<div class="col-md-6">
+											<h4 class="section-heading">Заголовок</h4>
+											<p> Далеко-далеко за словесными горами в стране гласных и согласных, живут
+												рыбные тексты. Путь пунктуация родного взобравшись своих себя
+												подзаголовок толку имеет мир повстречался залетают, вопроса
+												использовало, коварных там. Парадигматическая щеке предложения дал?</p>
+										</div>
+									</div>
+									<div class="product-tabs">
+										<ul class="nav nav-tabs">
+											<li class="active"><a data-toggle="tab"
+													href="index-3.html#tab1">ПОДРОБНОСТИ</a>
+											</li>
+											<li><a data-toggle="tab" href="index-3.html#tab2">Информация</a></li>
+											<li><a data-toggle="tab" href="index-3.html#tab3">Прочая Информация </a>
+											</li>
+										</ul>
+										<div class="tab-content">
+											<div id="tab1" class="tab-pane fade in active">
+												<h4 class="section-heading">ПОДРОБНОСТИ</h4>
+												<p>Далеко-далеко, за словесными горами в стране гласных и согласных
+													живут рыбные тексты. Своего проектах снова текстами силуэт
+													необходимыми подпоясал, приставка продолжил рекламных журчит,
+													родного, всеми алфавит текста вопроса первую коварный грустный
+													но?Точках заголовок парадигматическая залетают свое буквоград? Себя
+													безорфографичный агентство выйти путь свою парадигматическая даже,
+													образ напоивший семь большого последний решила жизни имени своего
+													он, необходимыми, проектах ipsum заглавных. Сбить, за.</p>
+											</div>
+											<div id="tab2" class="tab-pane fade">
+												<h4 class="section-heading">ИНФОРМАЦИЯ</h4>
+												<p>Далеко-далеко за словесными горами, в стране гласных и согласных
+													живут рыбные тексты. Мир предложения собрал, она первую пустился
+													рыбными заглавных подпоясал грустный большого своих лучше это сих
+													своего? Имеет журчит подпоясал напоивший.Все рыбного выйти за
+													взобравшись вскоре? Это образ запятых подпоясал меня власти
+													семантика по всей ему правилами всемогущая которой сих раз запятой
+													щеке страна, великий оксмокс скатился? Продолжил приставка
+													предложения всемогущая. </p>
+											</div>
+											<div id="tab3" class="tab-pane fade">
+												<h4 class="section-heading">ПРОЧАЯ ИНФОРМАЦИЯ</h4>
+												<p>Далеко-далеко за словесными горами в стране гласных и согласных живут
+													рыбные тексты. Пор курсивных до рыбными свой на берегу имеет
+													языкового эта, послушавшись первую сих грамматики залетают это
+													предупредила, всеми предложения оксмокс сбить?Толку ее власти
+													безопасную запятой! Жаренные продолжил алфавит рыбного одна
+													последний ты вдали, страна снова города необходимыми переписывается,
+													переулка заглавных подзаголовок решила безопасную моей назад
+													осталось даже первую, составитель текст. </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / PRODUCT MODAL -->
+	</section>
+	<!--/ products area end -->
+
+	<!-- Testimonials area -->
+	<section class="testimonials" id="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">ОТЗЫВЫ</h3>
+				</div>
+				<div class="testimonials-slider text-center col-md-12">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="testimonials-container shadow"> <img alt="user avatar"
+									src="assets-for-index-2/img/user.png">
+								<h3> Виталий Петров, Соучредитель / СЕО <span>Компания</span> </h3>
+								<p> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+									Единственное родного журчит эта вдали взгляд агентство правилами безорфографичный
+									заманивший там текстами? Все ручеек, приставка вопроса страна диких семантика свой?
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="testimonials-container shadow"> <img alt="user avatar"
+									src="assets-for-index-2/img/user2.png">
+								<h3> Виталий Петров, Соучредитель / СЕО <span>Компания</span> </h3>
+								<p> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+									Единственное родного журчит эта вдали взгляд агентство правилами безорфографичный
+									заманивший там текстами? Все ручеек, приставка вопроса страна диких семантика свой?
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="testimonials-container shadow"> <img alt="user avatar"
+									src="assets-for-index-2/img/user.png">
+								<h3> Виталий Петров, Соучредитель / СЕО <span>Компания</span> </h3>
+								<p> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+									Единственное родного журчит эта вдали взгляд агентство правилами безорфографичный
+									заманивший там текстами? Все ручеек, приставка вопроса страна диких семантика свой?
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonials-pagination"></div>
+					<div class="testimonials-slider-next right-arrow-negative"> <span class="ti-arrow-right"></span>
+					</div>
+					<div class="testimonials-slider-prev left-arrow-negative"> <span class="ti-arrow-left"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ Testimonials area end -->
+
+
+	<!-- counter section -->
+	<section class="text-center shadow section section-min nnrr">
+		<div class="about-counter" id="about-counter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6  about-counter-single">
+						<div class="counter"> <span class="fa fa-truck icon"></span>
+							<h2>
+								Бесплатная доставка по всему миру</h2>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6  about-counter-single">
+						<div class="counter"> <span class="ti-gift icon"></span>
+							<h2>Специальный подарок за заказ</h2>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 about-counter-single">
+						<div class="counter"> <span class="fa fa-money icon"></span>
+							<h2>
+								гарантия возврата денег</h2>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 about-counter-single">
+						<div class="counter"> <span class="ti-headphone-alt icon"></span>
+							<h2>
+								ПОДДЕРЖКА 24/7</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ counter section end-->
+
+
+
+	<!-- counter section -->
+	<div class="blog_area">
+		<div class="blog-counter" id="blog">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12">
+						<h3 class="section-heading">
+							Последние посты</h3>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-4 col-sm-6  blog-single">
+						<div class="single_blog">
+							<img src="assets-for-index-2/img/b1.jpg" alt="">
+							<div class="blog_details">
+								<a href="index-3.html#">
+									<h1>
+										Как пользоваться маской </h1>
+								</a>
+								<span>Апрель 16, 2020</span>
+								<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+									Раз то злых единственное! Строчка моей толку до заманивший, взобравшись предложения
+									алфавит напоивший одна, буквоград необходимыми вскоре города, lorem курсивных?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-6  blog-single">
+						<div class="single_blog">
+							<img src="assets-for-index-2/img/b2.jpg" alt="">
+							<div class="blog_details">
+								<a href="index-3.html#">
+									<h1>
+										Образец крови Covid 19</h1>
+								</a>
+								<span>Апрель 02, 2020</span>
+								<p>Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты.
+									Грустный своего возвращайся большой силуэт жизни, это точках, семь то lorem имени
+									его маленькая. Большой правилами вскоре даль дорогу рот.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-6  blog-single">
+						<div class="single_blog">
+							<img src="assets-for-index-2/img/b3.jpg" alt="">
+							<div class="blog_details">
+								<a href="index-3.html#">
+									<h1>
+										Все о коронавирусе </h1>
+								</a>
+								<span>Апрель 14, 2020</span>
+								<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+									Страна всемогущая на берегу там наш однажды ты решила до своего своих ручеек? Если,
+									предложения себя домах над маленькая силуэт инициал.</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ counter section end-->
+
+
+
+	<!-- contact section  -->
+	<section id="contact" class="contact contact-with-map">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">Контакты</h3>
+				</div>
+				<div class="col-md-3">
+					<div class="contact-data">
+						<h4>Россия</h4>
+						<ul>
+							<li><span class="ti-mobile icon"></span>+7(000) 000-00-00</li>
+							<li><span class="ti-email icon"></span>info@site.ru</li>
+							<li><span class="ti-map-alt icon"></span> Город <br>
+							</li>
+						</ul>
+					</div>
+					<div class="contact-data">
+						<h4>Россия</h4>
+						<ul>
+							<li><span class="ti-mobile icon"></span>+7(000) 000-00-00</li>
+							<li><span class="ti-map-alt icon"></span> Город<br>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-8 col-md-push-1">
+					<div class="contact-form">
+						<form class="contact-forms" id="contact-form"
+							action="https://team90degree.com/html/tf/bestshop-new-demo/bestshop-demo/mail.php"
+							method="post">
+							<div class="form-group">
+								<input class="form-control" type="text" name="name" placeholder="Имя">
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="email" name="email" placeholder="E-mail">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" cols="10" rows="7"
+									placeholder="Сообщение"></textarea>
+							</div>
+							<button type="submit"
+								class="btn btn-round btn-g btn btn-primary btn-lg text-center float-right">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Form Message -->
+		<div class="cr-contact-message-modal">
+			<p class="form-messege"></p>
+		</div>
+		<!--// Form Message -->
+		<div class="google-maps">
+			<div id="map-canvas"></div>
+		</div>
+
+	</section>
+	<!--/ contact section  end-->
+
+	<!-- Footer Section -->
+	<div class="section section-min">
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-4 col-sm-12">
+						<div class="f_logo">
+							<a href="index-3.html#"><img src="assets-for-index-2/img/logo-ru.png" alt="" /></a>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+								Первую ему грамматики, переулка проектах то послушавшись возвращайся. Если гор, она
+								предупредила дал взобравшись семь свой ведущими последний даже рыбными.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-12 info_menu">
+						<h4>ИНФОРМАЦИЯ</h4>
+						<ul>
+							<li><a href="index-3.html#"> Информация о доставке </a></li>
+							<li><a href="index-3.html#"> политика конфиденциальности </a></li>
+							<li><a href="index-3.html#"> Условия и положения </a></li>
+							<li><a href="index-3.html#"> Возврат и обмен </a></li>
+						</ul>
+						<ul>
+							<li><a href="index-3.html#"> Бесплатная доставка </a></li>
+							<li><a href="index-3.html#"> Статус заказа </a></li>
+							<li><a href="index-3.html#"> Подарочные карты</a></li>
+							<li><a href="index-3.html#"> Международный веб-сайт</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4  col-sm-12">
+						<div class="footer-newsletter">
+							<div class="center">
+								<h4>ОСТАВАЙТЕСЬ С НАМИ</h4>
+								<form action="index-3.html#" method="post">
+									<div class="input-group">
+										<input class="form-control " type="text" placeholder="e-mail">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button"><span
+													class="ti-arrow-right"></span></button>
+										</span>
+									</div>
+								</form>
+								<div class="social">
+									<ul>
+										<li class="fndus">НАЙДИТЕ НАС ЗДЕСЬ: </li>
+										<li><a href="http://facebook.com/" target="_blank"><span
+													class="ti-facebook"></span></a></li>
+										<li><a href="https://twitter.com/" target="_blank"><span
+													class="ti-twitter-alt"></span></a></li>
+										<li><a href="http://linkedin.com/" target="_blank"><span
+													class="ti-linkedin"></span></a></li>
+										<li><a href="https://vimeo.com/" target="_blank"><span
+													class="ti-vimeo-alt"></span></a></li>
+										<li><a href="http://youtube.com/" target="_blank"><span
+													class="ti-youtube"></span></a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="clearfix col-md-12 col-sm-12">
+						<hr>
+					</div>
+
+					<div class="col-md-12 col-sm-12">
+						<div class="footer-copyright">
+							<p>© 2020 Компания - Все права защищены.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="js/vendor/swiper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/jquery.inview.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYNfZ-tL7Q_kGLMO4Y5xz4lCl70V74AF4"></script>
+	<script src="js/vendor/jquery.countdown.js"></script>
+	<script src="js/tt-cart.js"></script>
+	<!-- <script src="js/ajax-mail.js"></script>
+	<script src="js/contact.js"></script> -->
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
