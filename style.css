@@ -230,7 +230,7 @@ Version: 1.0.1
 
 /* ===== 5. about style  ====*/
 .about {
-  background: #fff url("img/bg_content.webp") no-repeat scroll center center / cover ;
+  background: #fff url("img/bg_content.png") no-repeat scroll center center / cover ;
   min-height: inherit;
   padding: 50px 0 140px;
   position: relative;
@@ -391,7 +391,7 @@ Version: 1.0.1
 
 /* ===== 6. testimonials style  ====*/
 .testimonials {
-  background: #fff url("img/client-area.webp") no-repeat scroll center center / cover ;
+  background: #fff url("img/client-area.jpg") no-repeat scroll center center / cover ;
   position: relative;
 }
 .section-heading {
